@@ -14,11 +14,12 @@
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/node": "^7.16.8",
-    "@babel/preset-env": "^7.16.8"
+    "@babel/preset-env": "^7.16.8",
+    "nodemon": "^2.0.15"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx babel-node --expose-gc --max-old-space-size=4096 index.js"
+    "start": "nodemon --expose-gc --max-old-space-size=4096 --exec babel-node index.js"
   },
   "author": "vardhmancrayond",
   "license": "ISC"
