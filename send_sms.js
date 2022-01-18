@@ -17,8 +17,8 @@ let send_sms = ({ mobile_no, msg_txt, sender_id }) => {
         msgtext: msg_txt,
       },
     })
-      .then(resolve)
-      .catch(reject);
+      .then(({ status, data }) => resolve({ status, data }))
+      .catch((err) => reject(err));
   });
 };
 
